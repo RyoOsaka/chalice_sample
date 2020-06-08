@@ -1,0 +1,15 @@
+version: '3'
+services:
+  api:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    # command: python app.py
+    volumes:
+      - ..:/data/app
+    tty: true
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
+    # privileged: true

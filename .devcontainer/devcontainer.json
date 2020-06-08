@@ -1,0 +1,39 @@
+{
+    "name": "chalice_sample dev",
+    "context": ".",
+    "dockerComposeFile": [
+        "../docker/docker-compose.yml",
+        // "docker-compose.extend.yml"
+    ],
+    "service": "api",
+    "shutdownAction": "stopCompose",
+    "workspaceFolder": "/data/app/",
+    "postCreateCommand": "git clone -b {branch name} {GitHub url} . && pipenv install --dev",
+    "settings": {
+        "autoDocstring.docstringFormat": "sphinx",
+        "autoDocstring.guessTypes": false,
+        "editor.formatOnSave": true,
+        "editor.suggestSelection": "first",
+        "git.autofetch": true,
+        "git.confirmSync": false,
+        "kite.showWelcomeNotificationOnStartup": false,
+        "python.formatting.autopep8Args": [
+            "--max-line-length=200"
+        ],
+        "python.linting.pylintEnabled": false,
+        "python.linting.flake8Args": [
+            "--max-line-length=200"
+        ],
+        "python.linting.flake8Enabled": true,
+        "python.linting.mypyEnabled": true,
+        "python.jediEnabled": false,
+        "terminal.integrated.inheritEnv": false,
+        "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+    },
+    "extensions": [
+        "ms-python.python",
+        "njpwerner.autodocstring",
+        "ms-azuretools.vscode-docker",
+        "visualstudioexptteam.vscodeintellicode"
+    ]
+}

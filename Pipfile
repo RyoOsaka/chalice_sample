@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+autopep8 = "*"
+flake8-import-order = "*"
+Sphinx = "*"
+sphinx-autodoc-typehints = "*"
+mypy = "*"
+pytest = "*"
+
+[packages]
+boto3 = "*"
+chalice = "*"
+
+[requires]
+python_version = "3.8"
